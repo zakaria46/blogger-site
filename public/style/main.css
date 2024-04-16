@@ -1,0 +1,83 @@
+/* 
+    #00cc00
+ - this is the main site's color 
+*/
+
+body {
+    background: rgba(218, 232, 195, 0.738);
+}
+
+#logo {
+    color: #00cc00;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 16px;
+    font-size: 40px;
+    font-family: 'Lobster', cursive;
+}
+
+#inside-logo {
+    color: #006600;
+}
+
+nav {
+    background: #00cc00;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav ul.navbar-nav li>a {
+    color: #fff;
+    font-weight: bold;
+}
+
+nav ul.navbar-nav ul.dropdown-menu li>a {
+    color: #000;
+}
+
+nav ul.navbar-nav ul.dropdown-menu li>a:hover {
+    background: #00cc00;
+    color: #fff;
+}
+
+nav div.collapse form>button {
+    border: 1.5px solid #006600;
+    font-weight: bold;
+    color: #006600;
+}
+
+/* Start of The Main Section */
+
+section#main-sec {
+    background: #fff;
+    margin: 50px;
+    padding: 1px;
+    min-height: 600px;
+}
+
+section#main-sec h1 {
+    margin: 20px 20px 0px;
+}
+
+/* End of The Main Section */
+
+
+/* Footer */
+
+footer {
+    background: #00cc00;
+    color: #fff;
+    height: 100px;
+}
+
+footer > h6 {
+    padding-top: 10px;
+}
+
+/* hide the first two input fields of the update-delete Modal */
+#hideInput {
+    visibility: hidden;
+}
+
+#showInput {
+    visibility:visible;
+}

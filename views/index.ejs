@@ -1,0 +1,65 @@
+<%# Including the header partial %>
+    <%- include('partials/header.ejs') %>
+
+        <section id="main-sec">
+            <h1>Welcome to Blogger Space</h1>
+            <p>Here in Blogger Space you can find different posts in different categories and you can post your own,
+                Blogger Space is a space for sharing thoughts ideas asking questions and widen everyone's horizons, tell
+                us what you want to discuss share your ideas and articles with others, the space is all yours to use.
+            </p>
+
+            <% if (locals.formObj) { %>
+                <% formObj.forEach((element, index)=> { %>
+                    <div class="post" id="blogPost" style="cursor: pointer">
+                        <h3>
+                            <%= element.titleName %>
+                        </h3>
+                        <p>
+                            <%= element.paragraphContent %>
+                        </p>
+                        <h2>
+                            <%= index %>
+                        </h2>
+                        <button type="button" id="editBtn" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#myModal" onclick="updateDeleteFunc(event)">Edit</button>
+                        <button type="button" id="deleteBtn" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#myModal" onclick="updateDeleteFunc(event)">Delete</button>
+                    </div>
+                    <% }); %>
+                        <% } %>
+
+        </section>
+
+        <!-- Start of the modal containing the UPDATE form -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Modal Heading</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form action="/update" method="post" id="updateDeleteFrm">
+                            <h2>Sumbit a Blog Post</h2>
+                            <input type="text" name="updatedTitle">
+                            <input type="text" name="updatedParagraph">
+                            <input type="text" name="index">
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- End of the modal containing the UPDATE form -->
+
+        <%- include('partials/footer.ejs') %>

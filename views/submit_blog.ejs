@@ -1,0 +1,10 @@
+<!-- NOTE ALL STYLES WILL BE UPDATED LATER -->
+
+<form action="/submit" method="POST">
+    <h2>Sumbit a Blog Post</h2>
+    <input type="text" name="title<%= locals.postCount %>" placeholder="Enter a Topic Title">
+    <input type="text" name="paragraph<%= locals.postCount %>" placeholder="Write your Blog Post">
+    <input type="submit" value="Submit">
+</form>
+
+<%- include('partials/footer.ejs')  %>
