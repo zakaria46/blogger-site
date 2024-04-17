@@ -4,7 +4,8 @@
 */
 
 body {
-    background: rgba(218, 232, 195, 0.738);
+    /* background: rgba(218, 232, 195, 0.738); */
+    background: blueviolet;
 }
 
 #logo {
